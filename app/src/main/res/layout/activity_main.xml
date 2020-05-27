@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/carter_one"
+        android:text="capture and crop code"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:layout_above="@+id/camera_preview"/>
+
+
+    <ImageView
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_above="@+id/full_code"
+        android:contentDescription="dada"
+        />
+
+    <LinearLayout
+        android:id="@+id/full_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        >
+
+        <EditText
+            android:id="@+id/before"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:padding="4dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="*555*"
+            />
+
+        <EditText
+            android:id="@+id/code"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:padding="4dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="1234567890123456"
+            />
+
+        <EditText
+            android:id="@+id/after"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:layout_marginEnd="8dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="#"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/capture_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Capture Image "
+        android:background="@drawable/round_btn"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:textAllCaps="false"
+        android:layout_below="@+id/full_code"/>
+
+
+
+</RelativeLayout>
